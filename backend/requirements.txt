@@ -1,0 +1,17 @@
+# Phase 1 — core API
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+python-multipart==0.0.32
+python-dotenv==1.2.2
+pydantic-settings==2.14.2
+
+
+# Phase 2 — video/audio pipeline
+sqlalchemy==2.0.51
+faster-whisper==1.2.1
+
+# Phase 3 — signal extraction (numpy pulled in transitively by faster-whisper too)
+numpy==2.4.6
+
+# Phase 4 — Gemini text synthesis
+google-genai==2.17.0
