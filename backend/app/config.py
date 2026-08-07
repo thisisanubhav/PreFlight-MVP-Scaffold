@@ -13,11 +13,13 @@ class Settings(BaseSettings):
 
     # Gemini text synthesis: causal explanation, top-fix, hook autopsy rewrite.
     gemini_api_key: str | None = None
-    # "-latest" alias so this doesn't go stale as Google deprecates dated
-    # model snapshots (gemini-2.5-flash, current at code-authoring time,
-    # was already rejected as "no longer available to new users" by the
-    # time this was tested against a live key).
-    gemini_model: str = "gemini-flash-latest"
+    # Pinned, not the "gemini-flash-latest" alias: an alias can repoint to a
+    # different underlying model at any time (it already moved once during
+    # this project), which risks a behavior/latency shift right before or
+    # during a demo. Pinned to whatever "-latest" resolved to as of
+    # 2026-08-07 (confirmed live against this project's API key). Bump
+    # deliberately, not silently, if a newer model is wanted later.
+    gemini_model: str = "gemini-3.6-flash"
 
     # Local filesystem storage root for uploads/frames/transcripts (hackathon scope).
     storage_dir: str = "storage"

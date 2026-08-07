@@ -2,6 +2,7 @@ import uuid
 
 from fastapi import APIRouter, BackgroundTasks, HTTPException, UploadFile
 
+from app.config import get_settings
 from app.db import get_session
 from app.models.analyze import AnalyzeResponse
 from app.models.job import Job, JobStage
@@ -17,6 +18,13 @@ CHUNK_SIZE = 1024 * 1024
 
 @router.post("/analyze", response_model=AnalyzeResponse)
 async def analyze(file: UploadFile, background_tasks: BackgroundTasks) -> AnalyzeResponse:
+    # Demo mode: skip the real pipeline (ffmpeg/Whisper/Gemini) entirely and
+    # hand back the pre-computed fixture job, so judging isn't at the mercy of
+    # live processing speed or API availability. The uploaded file is never
+    # even read/saved — GET /status and /report special-case DEMO_JOB_ID too.
+    if get_settings().demo_mode:
+        return AnalyzeResponse(job_id=storage.DEMO_JOB_ID)
+
     job_id = uuid.uuid4().hex
     original_filename = file.filename or "upload.mp4"
 

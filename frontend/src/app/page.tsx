@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   API_BASE_URL,
@@ -182,6 +183,15 @@ export default function Home() {
           </p>
         )}
       </div>
+
+      {upload.status === "idle" && (
+        <Link
+          href="/report/demo"
+          className="text-xs text-neutral-400 underline hover:text-neutral-600"
+        >
+          View a sample report instead
+        </Link>
+      )}
     </div>
   );
 }

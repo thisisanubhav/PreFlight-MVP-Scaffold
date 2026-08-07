@@ -1,0 +1,302 @@
+{
+  "retention_analysis": {
+    "duration_seconds": 51.28,
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 5.0,
+        "transcript_text": "Most people think editing is what makes a video look good. It's",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.553,
+        "silence_ratio": 0.52,
+        "quiet_score": 0.48,
+        "words_per_second": 2.4,
+        "pace_score": 0.955,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 0.973,
+        "segment_risk": 0.401,
+        "drop_pct": 2.078,
+        "hook_adjusted": true
+      },
+      {
+        "start": 5.0,
+        "end": 10.0,
+        "transcript_text": "not. It's the first and second and almost nobody gets them right",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.515,
+        "silence_ratio": 0.38,
+        "quiet_score": 0.62,
+        "words_per_second": 2.4,
+        "pace_score": 0.955,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 0.973,
+        "segment_risk": 0.376,
+        "drop_pct": 1.97,
+        "hook_adjusted": true
+      },
+      {
+        "start": 10.0,
+        "end": 15.0,
+        "transcript_text": "so Like",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.378,
+        "silence_ratio": 0.62,
+        "quiet_score": 0.38,
+        "words_per_second": 0.4,
+        "pace_score": 0.045,
+        "disfluency_ratio": 1.0,
+        "fluency_score": 0.0,
+        "speech_score": 0.027,
+        "segment_risk": 0.801,
+        "drop_pct": 3.772,
+        "hook_adjusted": true
+      },
+      {
+        "start": 15.0,
+        "end": 20.0,
+        "transcript_text": "editing is I guess It's",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.297,
+        "silence_ratio": 0.68,
+        "quiet_score": 0.32,
+        "words_per_second": 1.0,
+        "pace_score": 0.318,
+        "disfluency_ratio": 0.2,
+        "fluency_score": 0.6,
+        "speech_score": 0.431,
+        "segment_risk": 0.695,
+        "drop_pct": 3.527,
+        "hook_adjusted": false
+      },
+      {
+        "start": 20.0,
+        "end": 25.0,
+        "transcript_text": "important but I Wanted to",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.302,
+        "silence_ratio": 0.6,
+        "quiet_score": 0.4,
+        "words_per_second": 1.0,
+        "pace_score": 0.318,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 0.591,
+        "segment_risk": 0.618,
+        "drop_pct": 3.179,
+        "hook_adjusted": false
+      },
+      {
+        "start": 25.0,
+        "end": 30.0,
+        "transcript_text": "talk about today is the kind like",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.35,
+        "silence_ratio": 0.52,
+        "quiet_score": 0.48,
+        "words_per_second": 1.4,
+        "pace_score": 0.5,
+        "disfluency_ratio": 0.143,
+        "fluency_score": 0.714,
+        "speech_score": 0.586,
+        "segment_risk": 0.587,
+        "drop_pct": 3.044,
+        "hook_adjusted": false
+      },
+      {
+        "start": 30.0,
+        "end": 35.0,
+        "transcript_text": "Right the video looks",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.263,
+        "silence_ratio": 0.78,
+        "quiet_score": 0.22,
+        "words_per_second": 0.8,
+        "pace_score": 0.227,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 0.536,
+        "segment_risk": 0.692,
+        "drop_pct": 3.512,
+        "hook_adjusted": false
+      },
+      {
+        "start": 35.0,
+        "end": 40.0,
+        "transcript_text": "Okay,",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.156,
+        "silence_ratio": 0.9,
+        "quiet_score": 0.1,
+        "words_per_second": 0.2,
+        "pace_score": 0.0,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 0.4,
+        "segment_risk": 0.796,
+        "drop_pct": 3.982,
+        "hook_adjusted": false
+      },
+      {
+        "start": 40.0,
+        "end": 45.0,
+        "transcript_text": "okay, so here's the actual point if your first line doesn't create a question in the viewer's",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.786,
+        "silence_ratio": 0.24,
+        "quiet_score": 0.76,
+        "words_per_second": 3.4,
+        "pace_score": 1.0,
+        "disfluency_ratio": 0.059,
+        "fluency_score": 0.882,
+        "speech_score": 0.953,
+        "segment_risk": 0.28,
+        "drop_pct": 1.66,
+        "hook_adjusted": false
+      },
+      {
+        "start": 45.0,
+        "end": 50.0,
+        "transcript_text": "head They are gone in five seconds. That's it. That's the whole game good. Oh",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.589,
+        "silence_ratio": 0.36,
+        "quiet_score": 0.64,
+        "words_per_second": 3.0,
+        "pace_score": 1.0,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 1.0,
+        "segment_risk": 0.343,
+        "drop_pct": 1.942,
+        "hook_adjusted": false
+      },
+      {
+        "start": 50.0,
+        "end": 51.284,
+        "transcript_text": "",
+        "scene_cut_count": 0,
+        "pacing_score": 0.0,
+        "energy_score": 0.168,
+        "silence_ratio": 0.917,
+        "quiet_score": 0.083,
+        "words_per_second": 0.0,
+        "pace_score": 0.0,
+        "disfluency_ratio": 0.0,
+        "fluency_score": 1.0,
+        "speech_score": 0.4,
+        "segment_risk": 0.797,
+        "drop_pct": 1.024,
+        "hook_adjusted": false
+      }
+    ],
+    "retention_curve": [
+      {
+        "timestamp": 0.0,
+        "predicted_audience_pct": 100.0
+      },
+      {
+        "timestamp": 5.0,
+        "predicted_audience_pct": 97.92
+      },
+      {
+        "timestamp": 10.0,
+        "predicted_audience_pct": 95.95
+      },
+      {
+        "timestamp": 15.0,
+        "predicted_audience_pct": 92.18
+      },
+      {
+        "timestamp": 20.0,
+        "predicted_audience_pct": 88.65
+      },
+      {
+        "timestamp": 25.0,
+        "predicted_audience_pct": 85.47
+      },
+      {
+        "timestamp": 30.0,
+        "predicted_audience_pct": 82.43
+      },
+      {
+        "timestamp": 35.0,
+        "predicted_audience_pct": 78.92
+      },
+      {
+        "timestamp": 40.0,
+        "predicted_audience_pct": 74.94
+      },
+      {
+        "timestamp": 45.0,
+        "predicted_audience_pct": 73.28
+      },
+      {
+        "timestamp": 50.0,
+        "predicted_audience_pct": 71.33
+      },
+      {
+        "timestamp": 51.28,
+        "predicted_audience_pct": 70.31
+      }
+    ],
+    "hook_analysis": {
+      "window_seconds": 15.0,
+      "opening_text": "Most people think editing is what makes a video look good. It's not. It's the first and second and almost nobody gets them right so Like",
+      "matched_strong_patterns": [
+        "contrarian opener"
+      ],
+      "matched_weak_patterns": [],
+      "pattern_score_norm": 0.75,
+      "pace_score": 0.652,
+      "energy_score": 0.482,
+      "hook_strength_score": 66.0
+    },
+    "top_risk_segment": {
+      "start": 35.0,
+      "end": 40.0,
+      "drop_pct": 3.982,
+      "retention_before": 78.92,
+      "retention_after": 74.94,
+      "transcript_excerpt": "Okay,",
+      "contributing_factors": {
+        "pacing_score": 0.0,
+        "energy_score": 0.156,
+        "quiet_score": 0.1,
+        "speech_score": 0.4,
+        "disfluency_ratio": 0.0
+      }
+    }
+  },
+  "causal_explanation": {
+    "start": 35.0,
+    "end": 40.0,
+    "transcript_excerpt": "Okay,",
+    "causal_explanation": "Between 35.0s and 40.0s, the video hits almost five seconds of dead air with a quiet_score of 0.1, no visual cuts, and only the single word 'Okay' spoken. Heuristic analysis estimates this abrupt drop in audio energy and total lack of visual progression creates the video's steepest drop-off.",
+    "concrete_fix": "Cut out the nearly 5-second pause between 35.0s and 40.0s so the video transitions immediately from 'Okay' into your next line."
+  },
+  "hook_autopsy": {
+    "hook_strength_score": 66.0,
+    "original_opening_line": "Most people think editing is what makes a video look good. It's not. It's the first and second and almost nobody gets them right so Like",
+    "assessment": "Your contrarian opening claim creates a solid curiosity gap that our heuristic estimates will help flatten early drop-off, though a lower audio energy score of 0.48 and an unfocused trailing phrase weaken its delivery.",
+    "rewritten_opening_line": "Editing won't save a bad video—if you mess up the first two seconds, viewers leave before they ever see your cuts."
+  },
+  "readiness_score": {
+    "score": 61.0,
+    "hook_component": 66.0,
+    "curve_component": 70.31,
+    "audio_component": 40.18
+  },
+  "heuristic_disclaimer": "PreFlight's scores and predictions come from a hand-tuned heuristic formula (pacing, audio energy, silence, speech pace/fluency, and hook pattern-matching), not a trained machine-learning model. Treat every number here as a rough, explainable estimate, not a data-backed prediction of real viewer behavior."
+}
