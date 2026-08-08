@@ -12,4 +12,4 @@ services:
       - key: DEMO_MODE
         value: "false"
       - key: CORS_ORIGINS
-        value: "http://localhost:3000" # update once the Vercel frontend URL is known
+        value: "https://preflight-mvp-scaffold.vercel.app,http://localhost:3000"
