@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: preflight-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # set manually in the Render dashboard, never committed
+      - key: DEMO_MODE
+        value: "false"
+      - key: CORS_ORIGINS
+        value: "http://localhost:3000" # update once the Vercel frontend URL is known

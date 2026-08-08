@@ -1,6 +1,18 @@
+import json
 from functools import lru_cache
+from typing import Annotated
 
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import BeforeValidator
+from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
+
+
+def _parse_origins(v: object) -> object:
+    if isinstance(v, str):
+        stripped = v.strip()
+        if stripped.startswith("["):
+            return json.loads(stripped)
+        return [origin.strip() for origin in stripped.split(",") if origin.strip()]
+    return v
 
 
 class Settings(BaseSettings):
@@ -8,8 +20,16 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    # CORS: the Next.js dev server origin(s) allowed to call this API.
-    cors_origins: list[str] = ["http://localhost:3000"]
+    # CORS: origins allowed to call this API (Next.js dev server locally,
+    # the deployed Vercel domain in prod). Accepts either a JSON array
+    # (CORS_ORIGINS=["https://x.vercel.app"]) or, easier to type into a
+    # hosting dashboard, a comma-separated string
+    # (CORS_ORIGINS=https://x.vercel.app,http://localhost:3000). NoDecode
+    # stops pydantic-settings from JSON-decoding the raw env string itself
+    # (which errors on non-JSON input) before our validator ever sees it.
+    cors_origins: Annotated[list[str], NoDecode, BeforeValidator(_parse_origins)] = [
+        "http://localhost:3000"
+    ]
 
     # Gemini text synthesis: causal explanation, top-fix, hook autopsy rewrite.
     gemini_api_key: str | None = None
