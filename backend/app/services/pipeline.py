@@ -5,16 +5,43 @@ GET /status/{job_id} and show progress.
 """
 
 import json
-import traceback
+import logging
+import subprocess
 import wave
 from pathlib import Path
 
 import numpy as np
+from google.genai import errors as genai_errors
 
 from app.db import get_session
 from app.models.job import Job, JobStage
 from app.models.report import CausalExplanation, FullReport, HookAutopsy, ReadinessScore
 from app.services import ffmpeg_service, gemini_service, signals, storage, whisper_service
+
+logger = logging.getLogger(__name__)
+
+
+def _user_facing_error(exc: Exception) -> str:
+    """Maps an internal exception to a short, safe message for the frontend.
+
+    The full exception + traceback is always logged server-side (see the
+    except block in run_pipeline) -- this function controls only what the
+    client is allowed to see. Previously the raw Python traceback (file
+    paths, library internals) was sent straight to the frontend and
+    rendered verbatim in the UI.
+    """
+    if isinstance(exc, genai_errors.ClientError) and exc.code == 429:
+        return (
+            "The AI analysis service is temporarily rate-limited. "
+            "Please try again in a few minutes."
+        )
+    if isinstance(exc, genai_errors.ServerError):
+        return "The AI analysis service is temporarily unavailable. Please try again shortly."
+    if isinstance(exc, genai_errors.APIError):
+        return "The AI analysis service returned an error. Please try again."
+    if isinstance(exc, subprocess.CalledProcessError):
+        return "Failed to process the video file. Please check it's a valid video and try again."
+    return "Something went wrong while analyzing your video. Please try again."
 
 
 def _set_stage(job_id: str, stage: JobStage, error_message: str | None = None) -> None:
@@ -105,6 +132,5 @@ def run_pipeline(job_id: str, original_filename: str) -> None:
 
         _set_stage(job_id, JobStage.DONE)
     except Exception as exc:
-        _set_stage(
-            job_id, JobStage.ERROR, error_message=f"{exc}\n{traceback.format_exc()}"
-        )
+        logger.exception("Pipeline failed for job %s", job_id)
+        _set_stage(job_id, JobStage.ERROR, error_message=_user_facing_error(exc))
